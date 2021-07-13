@@ -5,7 +5,7 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "start:zh": "docusaurus start --locale zh-CN",
+    "start:zh": "cross-env _LANG='zh-CN' docusaurus start",
     "build": "docusaurus build",
     "build:en": "cross-env BASE_URL='/docs/en/' docusaurus build --locale en --out-dir build/en",
     "build:all": "npm run build && npm run build:en",

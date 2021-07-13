@@ -24,6 +24,7 @@ Install [yarn](https://yarnpkg.com/en/). In `website` folder:
 ## Preview the site
 In `website` folder:
 ```
-yarn start
+yarn start # English
+yarn start:zh # 中文
 ```
 Then you should be able to preview the website at `http://localhost:3000/` in your browser.

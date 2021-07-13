@@ -1,5 +1,4 @@
 /**
- * 开发时记得把 /static/js/custon.js 里面的重定向关闭
  * 升级到这v2后， /en 路径兼容参考 https://github.com/facebook/docusaurus/issues/4723, 暂时还不完美
  */
 
@@ -13,10 +12,10 @@ module.exports = {
   scripts: [
     'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-MML-AM_CHTML',
     'https://cdn.jsdelivr.net/npm/mermaid@8.4.0/dist/mermaid.min.js',
-    '/docs/js/custom.js'
+    process.env.NODE_ENV == 'development' ? '/docs/js/custom_dev.js' : '/docs/js/custom.js'
   ],
   i18n: {
-    defaultLocale: 'en',
+    defaultLocale: process.env._LANG || 'en',
     locales: ['en', 'zh-CN'],
     localeConfigs: {
       en: {
